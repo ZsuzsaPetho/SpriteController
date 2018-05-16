@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<title>Mario's Labyrinth</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+    body, html {
+        height: 100%;
+        line-height: 1
+    }
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+    .menu {display: none}
+    .bgimg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("");
+        min-height: 100%;
+    }
+    .nomargin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    .nopadding {
+        padding-top: 10px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    * {
+        -webkit-user-select: none;
+    }
+    canvas {
+        touch-action: none;
+        width: 100%;
+    }
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+    <div class="w3-bar w3-xlarge w3-white w3-opacity w3-hover-opacity-off" id="myNavbar">
+        <a href="#" class="w3-bar-item w3-button">HOME</a>
+        <a href="#menu" class="w3-bar-item w3-button">GAME</a>
+        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+        <img src="logos/TheLogo.png" class="w3-display-middle w3-center" alt="Title" height="40px">
+
+    </div>
+
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+
+    <div class="w3-display-middle w3-center">
+        <img src="logos/MMM++.png" alt="Logo" height="150">
+        <p><a href="#menu" id="btnPlay" class="w3-button w3-xxlarge w3-black">Let's play</a></p>
+
+
+    </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-32 w3-xxlarge w3-center" id="menu">
+    <div class="w3-content">
+
+        <p id="muffin_label" class="w3-left nomargin nopadding">
+            <span id="message"></span>
+        </p>
+        <canvas id="canvas"  height=600px width=900px ></canvas>
+
+
+
+
+    </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-white w3-grayscale w3-xlarge" id="about">
+    <div class="w3-content">
+        <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Leírás</h1>
+        <h2><b>A játék célja:</b></h2>
+        <ul>
+            <li>Összeszedni a pályán található muffinokat, úgy hogy nem érintjük az ellenséget, a gyilkos sószórókat.</li>
+            <li>Az ellenséget fánkkal tudjuk lelőni, amit szintén játék közben szedhetünk fel.</li>
+            <li>A pályát a kapun keresztül hagyhatjuk el, ami akkor nyílik ki, ha összeszedtük az összes muffint.</li>
+            <li>A feladatot nehezíti, hogy adott időn belül kell kijutni a pályáról. Ha ez nem sikerül, vesztünk.</li>
+            <li>Az időt vissza lehet állítani, ha felszedünk egy visszatekerő ikont.</li>
+            <li>Pontokat a gyorsaságunk és a pálya szintje alapján kapunk.</li>
+            <li>A HighScore menüpontban, megtekinthető az eddig elért legjobb pontjaink.</li>
+            <li>Jelenleg 3 level játszható végig a játékban.</li>
+        </ul>
+        <p><strong>Sok sikert és jó játékot!</strong> <img src="logos/MarioRunM+.png" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
+
+        <h2><b>Irányítás:</b></h2>
+        <ul>
+            <li>Asztali gépen a nyilakkal és space-szel lehet írányítani a játékot.</li>
+            <li>Mobil/Tablet környezetben a képernyőn megjelenő nyilakkal és fire ikonnal irányítható.</li>
+        </ul>
+
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src="js/pep.js"></script>
+<script type="text/javascript" src="js/howler.min.js"></script>
+<script type="text/javascript" src="sound.js"></script>
+<script type="text/javascript" src="framework.js"></script>
+<script type="text/javascript" src="hero.js"></script>
+<script type="text/javascript" src="enemy.js"></script>
+<script type="text/javascript" src="collectables.js"></script>
+<script type="text/javascript" src="gameEnvironmentEntities.js"></script>
+<script type="text/javascript" src="displayEntities.js"></script>
+<script type="text/javascript" src="controlEntities.js"></script>
+<script type="text/javascript" src="initScenes.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</html>
